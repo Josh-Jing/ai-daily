@@ -1,0 +1,36 @@
+# AI 日报
+
+每日工作日自动生成的 AI 技术日报，聚焦 LLM 推理系统与 AI Agent 前沿动态。
+
+## 日报结构
+
+每篇日报包含以下 6 个版块：
+
+| # | 版块 | 说明 |
+|---|------|------|
+| 1 | 推理服务论文 | LLM inference serving 领域最新学术论文（标题 + 总结 + 链接） |
+| 2 | KV Cache 复用论文 | KV cache reuse 领域最新学术论文（标题 + 总结 + 链接） |
+| 3 | 推理 Infra 复用论文 | inference infrastructure reuse / disaggregation 领域最新学术论文（标题 + 总结 + 链接） |
+| 4 | 技术新闻（3篇） | 与上述论文主题相关的技术新闻、行业动态、工程博客 |
+| 5 | Vibe Coding 实践 | 一条 vibe coding 最佳实践或经验技巧 |
+| 6 | AI Agent 技术新闻 | AI agent 领域的最新技术新闻 |
+
+## 论文聚焦领域
+
+- **推理服务**：LLM 推理调度、请求批处理、SLO 保障、多轮对话服务、agentic serving
+- **KV Cache 复用**：非前缀 KV cache 复用、前缀缓存、KV 压缩与拼接、RAG 场景缓存优化
+- **推理基础设施复用**：prefill-decode 分离、attention-FFN 分离、跨引擎状态共享、分布式推理架构
+
+## 目录结构
+
+```
+YYYY/
+├── MM/
+│   └── YYYY-MM-DD.md      # 每日日报
+```
+
+按 年/月/日.md 三层组织，例如 `2026/07/2026-07-31.md`。
+
+## 自动生成
+
+工作日早晨 5:30 自动生成，由 AI Agent 收集 arXiv 论文和互联网技术新闻后撰写，并自动提交至本仓库。
