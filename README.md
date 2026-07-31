@@ -10,7 +10,7 @@
 |---|------|------|
 | 1 | 推理服务论文 | LLM inference serving 领域最新学术论文（标题 + 总结 + 链接） |
 | 2 | KV Cache 复用论文 | KV cache reuse 领域最新学术论文（标题 + 总结 + 链接） |
-| 3 | 推理 Infra 复用论文 | inference infrastructure reuse / disaggregation 领域最新学术论文（标题 + 总结 + 链接） |
+| 3 | 推理 Infra 论文 | inference infrastructure / disaggregation 领域最新学术论文（标题 + 总结 + 链接） |
 | 4 | 技术新闻（3篇） | 与上述论文主题相关的技术新闻、行业动态、工程博客 |
 | 5 | Vibe Coding 实践 | 一条 vibe coding 最佳实践或经验技巧 |
 | 6 | AI Agent 技术新闻 | AI agent 领域的最新技术新闻 |
@@ -19,7 +19,7 @@
 
 - **推理服务**：LLM 推理调度、请求批处理、SLO 保障、多轮对话服务、agentic serving
 - **KV Cache 复用**：非前缀 KV cache 复用、前缀缓存、KV 压缩与拼接、RAG 场景缓存优化
-- **推理基础设施复用**：prefill-decode 分离、attention-FFN 分离、跨引擎状态共享、分布式推理架构
+- **推理基础设施**：prefill-decode 分离、attention-FFN 分离、跨引擎状态共享、分布式推理架构
 
 ## 目录结构
 
@@ -34,3 +34,9 @@ YYYY/
 ## 自动生成
 
 工作日早晨 5:30 自动生成，由 AI Agent 收集 arXiv 论文和互联网技术新闻后撰写，并自动提交至本仓库。
+
+## 提交规则
+
+- **一日报一提交**：每次提交新增且仅新增一份日报，提交与日报一一对应。
+- 不得在一次提交中包含多份日报，也不得分多次提交修改同一份日报。
+- 如需修正已提交的日报，使用 `git commit --amend` 或 `git rebase` 合并改动，保持一日报一提交的对应关系，然后 force-push。
