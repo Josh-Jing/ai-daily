@@ -36,6 +36,7 @@ def get_conn() -> sqlite3.Connection:
 
 
 def cmd_check(url: str) -> int:
+    url = url.strip()
     conn = get_conn()
     row = conn.execute("SELECT title FROM papers WHERE url = ?", (url,)).fetchone()
     conn.close()
@@ -47,6 +48,8 @@ def cmd_check(url: str) -> int:
 
 
 def cmd_add(url: str, title: str) -> int:
+    url = url.strip()
+    title = title.strip()
     conn = get_conn()
     try:
         conn.execute("INSERT INTO papers (url, title) VALUES (?, ?)", (url, title))
